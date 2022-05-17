@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { handleArticleClicked } from '@/lib/handleArticleClick';
 import siteMetadata from '@/data/siteMetadata';
 import slugify from 'slugify';
-import { useIsArticleRead } from '@/hooks/useIsArticleRead';
 import { useRouter } from 'next/dist/client/router';
 
 type Props = {
@@ -13,8 +12,6 @@ type Props = {
 export function ArticleCard({ article }: Props) {
   const router = useRouter();
   const slug = slugify(article.title).toLowerCase();
-
-  const [hasRead] = useIsArticleRead(slug);
 
   return (
     <div>
@@ -44,7 +41,6 @@ export function ArticleCard({ article }: Props) {
                   day: 'numeric'
                 }
               )}{' '}
-              {hasRead && (
                 <span className="text-sm inline-flex items-center text-teal-600 dark:text-teal-800 opacity-75 ml-3">
                   <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path
@@ -57,7 +53,6 @@ export function ArticleCard({ article }: Props) {
                   </svg>
                   <span>read</span>
                 </span>
-              )}
             </span>
           </div>
         </div>

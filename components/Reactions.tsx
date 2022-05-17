@@ -1,63 +1,8 @@
-import useArticleReactions from '@/hooks/useArticleReactions';
-
 const Reactions = ({ slug }) => {
-  const {
-    hasLiked,
-    hasLoved,
-    hasClapped,
-    hasPartied,
-    reactions,
-    handleIncrementLike,
-    handleDecrementLike,
-    handleIncrementLove,
-    handleDecrementLove,
-    handleIncrementClap,
-    handleDecrementClap,
-    handleIncrementParty,
-    handleDecrementParty
-  } = useArticleReactions(slug);
 
   return (
     <div className="grid items-center justify-between grid-cols-4 gap-6 md:grid-cols-2">
-      <ReactionCard
-        isActive={hasLiked}
-        incrementCB={handleIncrementLike}
-        decrementCB={handleDecrementLike}
-      >
-        <span className="text-4xl">👍</span>
-        <span className="text-xl font-semibold">{reactions?.like_count}</span>
-        <span className="text-sm">LIKE</span>
-      </ReactionCard>
-
-      <ReactionCard
-        isActive={hasLoved}
-        incrementCB={handleIncrementLove}
-        decrementCB={handleDecrementLove}
-      >
-        <span className="text-4xl">❤️</span>
-        <span className="text-xl font-semibold">{reactions?.love_count}</span>
-        <span className="text-sm uppercase">LOVE</span>
-      </ReactionCard>
-
-      <ReactionCard
-        isActive={hasClapped}
-        incrementCB={handleIncrementClap}
-        decrementCB={handleDecrementClap}
-      >
-        <span className="text-4xl">👏</span>
-        <span className="text-xl font-semibold">{reactions?.clap_count}</span>
-        <span className="text-sm uppercase">CLAP</span>
-      </ReactionCard>
-
-      <ReactionCard
-        isActive={hasPartied}
-        incrementCB={handleIncrementParty}
-        decrementCB={handleDecrementParty}
-      >
-        <span className="text-4xl">🎉</span>
-        <span className="text-xl font-semibold">{reactions?.party_count}</span>
-        <span className="text-sm uppercase">PARTY</span>
-      </ReactionCard>
+      <p>Rinkeby</p>
     </div>
   );
 };
