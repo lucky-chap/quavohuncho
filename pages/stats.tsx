@@ -26,7 +26,7 @@ export default function Stats() {
           Stats
         </span>
         <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
-          Interested in numbers? I've got you covered.
+          Interested in numbers? I&apos;ve got you covered.
         </span>
       </h1>
       <div className="grid grid-cols-4 gap-2 md:gap-6">

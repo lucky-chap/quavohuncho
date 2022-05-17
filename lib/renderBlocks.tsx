@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import { AnchorLink } from '@/components/AnchorLink';
 import { Callout } from '../components/Callout';
-import { CodeBlock } from '../components/Codeblock';
+import CodeBlock from '../components/Codeblock';
 import Image from 'next/image';
 import { YoutubeEmbed } from '../components/YoutubeEmbed';
 
@@ -135,10 +135,7 @@ export function renderBlocks(block) {
     case 'code':
       return (
         <div>
-          <CodeBlock
-            language={value.language}
-            code={value.text[0].text.content}
-          />
+          d
         </div>
       );
     case 'callout':

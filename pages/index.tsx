@@ -1,12 +1,6 @@
-import { ButtonType, SubscribeSize } from '@/lib/types';
-
-import { ArticleList } from '@/components/ArticleList';
+import { ButtonType } from '@/lib/types';
 import { Button } from '@/components/Button';
 import { Container } from 'layouts/Container';
-import { GetStaticProps } from 'next';
-import Image from 'next/image';
-import { Subscribe } from '@/components/Subscribe';
-import siteMetadata from '@/data/siteMetadata';
 import { useRouter } from 'next/router';
 import { ResumeDownload } from '@/components/ResumeDownload';
 
@@ -89,7 +83,7 @@ export default function Home({ recentArticles }) {
         </div> */}
         <div className="mt-12 space-y-6">
           <h2 className="m-0 text-gray-900 dark:text-white">Work experience</h2>
-          <p>Here's a brief rundown of my most recent experiences.</p>
+          <p>Here&apos;s a brief rundown of my most recent experiences.</p>
           <div className="space-y-2">
             {workExperience.map((workItem) => (
               <div

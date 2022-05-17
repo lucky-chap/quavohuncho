@@ -13,7 +13,7 @@ export default function Toolbox({ toolboxContent }) {
           Toolbox
         </span>
         <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
-          Here's what I use daily.
+          Here&apos;s what I use daily.
         </span>
       </h1>
       <StickyColumn>
