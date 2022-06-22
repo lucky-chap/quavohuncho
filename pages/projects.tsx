@@ -4,15 +4,47 @@ import Image from 'next/image';
 export default function Projects() {
   return (
     <Container title="Projects - Obed Boakye Danquah">
-      <h1>
+      <h1 className="mb-8">
         <span className="block text-base font-semibold tracking-wide text-center text-teal-500 uppercase dark:text-teal-400">
           Projects
         </span>
-        <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
+        <span className="block max-w-2xl mx-auto mt-2 my-36 text-4xl font-bold leading-10 text-center sm:text-5xl">
           A selection of my favorite works.
         </span>
       </h1>
-      <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-3 mt-6">
+        <div className="col-span-1">
+          <h2 className="mt-0">Zed</h2>
+          <p>
+            Zed, a peer-to-peer sharing platform crafted and designed with
+            simplicity in mind.
+          </p>
+          <a
+            className="items-center justify-center w-full px-12 py-3 font-medium text-white no-underline rounded-full cursor-pointer md:w-auto md:inline-flex bg-midnight dark:bg-gray-200 dark:text-midnight general-ring-state"
+            href="https://zed-sharing.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visit Zed
+          </a>
+        </div>
+        <div className="col-span-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
+            <div className="relative col-span-5 overflow-hidden bg-gray-100 rounded-lg dark:bg-midnight md:h-[450px] h-auto">
+              <Image
+                className=""
+                objectFit="fill"
+                src="/static/zed.png"
+                placeholder="blur"
+                blurDataURL="/static/zed.png"
+                width={9110}
+                height={3139}
+                layout="fill"
+                alt={'Seraph screenshot'}
+              />
+            </div>
+          </div>
+        </div>
         <div className="col-span-1">
           <h2 className="mt-0">Seraph</h2>
           <p>

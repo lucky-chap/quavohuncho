@@ -3,28 +3,33 @@ import { Button } from '@/components/Button';
 import { Container } from 'layouts/Container';
 import { useRouter } from 'next/router';
 import { ResumeDownload } from '@/components/ResumeDownload';
-
+import Link from 'next/link';
 
 const workExperience = [
   {
-    company: 'Unigem Technology Private Limited',
+    company: 'Zed Sharing App',
     title: 'Frontend Developer',
-    duration: 'Dec 2021 - April 2022'
+    duration: 'Jun 1 - Jun 30 (2022)'
   },
   {
-    company: 'MeQasa',
+    company: 'Seraph',
     title: 'Frontend Developer',
-    duration: 'Jan 2021 - Nov 2021'
+    duration: 'March 1 - April 30 (2022)'
   },
   {
-    company: 'TymeBank',
-    title: 'Frontend Developer',
-    duration: 'Feb 2020 - Nov 2020'
-  },
-  {
-    company: 'FinChatBot',
+    company: 'Darwin',
     title: 'Fullstack Web Developer Intern',
-    duration: 'Mar 2019 - Sep 2019'
+    duration: 'May 5 - May 18 (2022)'
+  },
+  {
+    company: 'Nova',
+    title: 'Frontend Developer',
+    duration: 'Jan 13 - Feb 17 (2022)'
+  },
+  {
+    company: 'Stackz',
+    title: 'Fullstack Web Developer Intern',
+    duration: 'Oct 8 - Nov 3 (2021)'
   }
 ];
 
@@ -38,7 +43,7 @@ export default function Home({ recentArticles }) {
             <h1 className="order-2 col-span-5 text-4xl leading-tight md:leading-normal md:order-1 sm:text-5xl">
               Hello 👋. My name is{' '}
               <span className="text-teal-500 dark:text-teal-400">Obed</span>. I
-              am a frontend web developer.
+              am a fullstack web developer.
             </h1>
             <div className="order-1 md:order-2">
               {/* <Image
@@ -83,7 +88,13 @@ export default function Home({ recentArticles }) {
         </div> */}
         <div className="mt-12 space-y-6">
           <h2 className="m-0 text-gray-900 dark:text-white">Work experience</h2>
-          <p>Here&apos;s a brief rundown of my most recent experiences.</p>
+          <p>
+            Here&apos;s a brief rundown of my most recent experiences (personal
+            projects).
+          </p>
+          <Link href="/projects">
+            <p className="cursor-pointer">Find them here</p>
+          </Link>
           <div className="space-y-2">
             {workExperience.map((workItem) => (
               <div
@@ -94,7 +105,7 @@ export default function Home({ recentArticles }) {
                   {workItem.company}
                 </span>
                 <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-700 mb-2 sm:mb-0"></span>
-                <span className="flex-none mb-2 sm:mb-0">{workItem.title}</span>
+                {/* <span className="flex-none mb-2 sm:mb-0">{workItem.title}</span> */}
                 <span className="flex-none mb-2 sm:mb-0">
                   {workItem.duration}
                 </span>
